@@ -1,0 +1,16 @@
+.bg {
+    background-image: url('../../images/bgCar.png');
+    background-size: cover;
+    /* background: rgba(0,0,0,0.5); */
+    
+}
+.bg::after {
+    content: '';
+    width: 100%;
+    height: fit-content;
+    height: 100%;
+    /* min-height: 100%; */
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}

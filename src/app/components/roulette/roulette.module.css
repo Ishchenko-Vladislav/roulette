@@ -1,0 +1,25 @@
+.top {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    position: absolute;
+    top: -20px;
+    transform: translateX(-7px);
+
+}
+.bottom {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    position: absolute;
+    bottom: -20px;
+    transform: translateX(-7px);
+}
+.transition {
+    /* transition: 5s cubic-bezier(.21,.53,.29,.99); */
+}
+.border {
+    border: 1px solid red;
+}
