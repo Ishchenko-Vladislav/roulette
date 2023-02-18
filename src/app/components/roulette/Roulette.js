@@ -1,12 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import style from "./roulette.module.css";
-import car1 from "../../images/car1.png";
-import car2 from "../../images/car2.png";
-import car3 from "../../images/car3.png";
-import car4 from "../../images/car4.png";
-import car5 from "../../images/car5.png";
-import car6 from "../../images/car6.png";
-import car7 from "../../images/car7.png";
 import info from "../../images/info.png";
 import { RouletteItems } from "./RouletteItems";
 import { ButtonCount } from "../../ui/ButtonCount";
@@ -14,10 +7,9 @@ import { Button } from "../../ui/Button";
 import { GenerateArray } from "../../utils/GenerateArray";
 export const Roulette = () => {
   const [arr, setArr] = useState([]);
-  const items = [car1, car2, car3, car4, car5, car6, car7];
   const ref = useRef(null);
   const handler = () => {
-    setArr(GenerateArray([...new Array(81)], items));
+    setArr(GenerateArray([...new Array(81)]));
     ref.current.style = "transition: 0s, transform: translateX(0)";
     const scroll = ref.current.scrollWidth / 2 - ref.current.clientWidth / 2;
     setTimeout(() => {
@@ -26,7 +18,7 @@ export const Roulette = () => {
   };
 
   useEffect(() => {
-    setArr(GenerateArray([...new Array(81)], items));
+    setArr(GenerateArray([...new Array(81)]));
   }, []);
 
   return (
