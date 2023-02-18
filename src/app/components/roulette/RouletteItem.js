@@ -8,7 +8,7 @@ export const RouletteItem = ({ img, is, opacity }) => {
         opacity && "opacity-70"
       } `}
     >
-      <img className="h-full w-full" src={img} />
+      <img className="h-full w-full" src={img} alt={img} />
     </div>
   );
 };

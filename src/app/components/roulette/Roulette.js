@@ -36,7 +36,7 @@ export const Roulette = () => {
         <Button handler={handler} text={"Get Start"} />
       </div>
       <div className="flex mt-[20px]">
-        <img src={info} />
+        <img src={info} alt="info" />
         <div className="ml-2">Mint price indicated in ETH (0.02 ETH)</div>
       </div>
       <div

@@ -12,7 +12,7 @@ export const Footer = () => {
   return (
     <div className="max-h-[95px] lg:max-h-full 2xl:px-6 px-12 bg-[#1C1C1C] items-center flex justify-between mt-auto relative z-10 lg:flex-col lg:py-2">
       <div className="flex">
-        <img className="pr-12 sm:pr-2 sm:hidden" src={logo} />
+        <img className="pr-12 sm:pr-2 sm:hidden" src={logo} alt="logo" />
         <FooterItem img={helpCircle} text="FAQ" />
         <FooterItem img={verified} text="Customer Support" />
       </div>

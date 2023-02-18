@@ -14,7 +14,7 @@ import { Burger } from "./Burger";
 export const Header = () => {
   return (
     <header className="max-h-[75px] 2xl:px-6 bg-[#1C1C1C] h-full flex px-12 items-center ">
-      <img className="pr-12" src={logo} />
+      <img className="pr-12" src={logo} alt="logo" />
       <div className="flex lg:hidden">
         <NavItem img={home} text="Home" />
         <NavItem img={play} text="Trailer" />
