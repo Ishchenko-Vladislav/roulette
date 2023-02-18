@@ -4,9 +4,6 @@ import style from "./Main.module.css";
 export const Main = () => {
   return (
     <main className={`flex h-full flex-1 bg-black ${style.bg} relative`}>
-      {/* <div className="h-full w-full bg-black absolute ">
-        <img className="w-full opacity-50 object-cover h-full" src={bg} />
-      </div> */}
       <div className="mt-[20px] flex flex-col justify-center items-center mx-auto text-white relative z-10 text-center sm:w-[95%]">
         <div className="text-base">Countdown</div>
         <div className="text-4xl mb-[45px]">122 : 45 : 12 : 12</div>

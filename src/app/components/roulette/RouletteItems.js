@@ -6,7 +6,7 @@ export const RouletteItems = ({ items, refs }) => {
   return (
     <div
       ref={refs}
-      className={`inline-flex  w-full h-full ${style.transition}`}
+      className={`inline-flex  w-full h-full  ${style.transition}`}
     >
       {items.map((item, index) => (
         <RouletteItem key={index} img={item} opacity={index == 40 && "true"} />
