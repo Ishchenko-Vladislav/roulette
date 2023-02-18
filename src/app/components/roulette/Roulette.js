@@ -13,11 +13,11 @@ import { ButtonCount } from "../../ui/ButtonCount";
 import { Button } from "../../ui/Button";
 import { GenerateArray } from "../../utils/GenerateArray";
 export const Roulette = () => {
-  const [arr, setArr] = useState([...new Array(81)]);
+  const [arr, setArr] = useState([]);
   const items = [car1, car2, car3, car4, car5, car6, car7];
   const ref = useRef(null);
   const handler = () => {
-    setArr(GenerateArray(arr, items));
+    setArr(GenerateArray([...new Array(81)], items));
     ref.current.style = "transition: 0s, transform: translateX(0)";
     const scroll = ref.current.scrollWidth / 2 - ref.current.clientWidth / 2;
     setTimeout(() => {
@@ -26,7 +26,7 @@ export const Roulette = () => {
   };
 
   useEffect(() => {
-    setArr(GenerateArray(arr, items));
+    setArr(GenerateArray([...new Array(81)], items));
   }, []);
 
   return (
