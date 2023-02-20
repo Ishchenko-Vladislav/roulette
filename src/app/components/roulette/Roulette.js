@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import style from "./roulette.module.css";
 import info from "../../images/info.png";
 import { RouletteItems } from "./RouletteItems";
@@ -17,8 +17,11 @@ export const Roulette = () => {
     }, 10);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setArr(GenerateArray([...new Array(81)]));
+    window.addEventListener("resize", () => {
+      setArr(GenerateArray([...new Array(81)]));
+    });
   }, []);
 
   return (
@@ -34,7 +37,8 @@ export const Roulette = () => {
         </div>
       </div>
       <div
-        className={`w-[1300px]
+        className={`
+        w-[1300px]
          mb-[50px] 
          2xl:w-[1000px] 
          xl:w-[800px] 
@@ -49,15 +53,16 @@ export const Roulette = () => {
            border-white
             border-2 rounded-xl 
             h-[192px] mt-[40px] 
-            overflow-hidden 
-            ${style.transition}`}
+            `}
       >
         <div className="absolute left-[50%] translate-x-[-50%] h-full z-10">
-          <div className={style.top}></div>
-          <div className="w-[5px] bg-white h-full"></div>
-          <div className={style.bottom}></div>
+          <div className={`${style.top} md:translate-x-[-9px]`}></div>
+          <div className="w-[6px] md:w-[2px] bg-white h-full"></div>
+          <div className={`${style.bottom} md:translate-x-[-9px]`}></div>
         </div>
-        <RouletteItems refs={ref} items={arr} />
+        <div className="w-full h-full overflow-hidden">
+          <RouletteItems refs={ref} items={arr} />
+        </div>
       </div>
     </>
   );
