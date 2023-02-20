@@ -6,9 +6,22 @@ import car5 from "../images/car5.png";
 import car6 from "../images/car6.png";
 import car7 from "../images/car7.png";
 
-export const GenerateArray = (arrs) => {
-  const items = [car1, car2, car3, car4, car5, car6, car7];
+import carMobile1 from "../images/carMobile1.png";
+import carMobile2 from "../images/carMobile2.png";
+import carMobile3 from "../images/carMobile3.png";
 
+export const GenerateArray = (arrs) => {
+  const item = [car1, car2, car3, car4, car5, car6, car7];
+  const itemsMobile = [
+    carMobile1,
+    carMobile2,
+    carMobile3,
+    carMobile2,
+    carMobile1,
+    carMobile3,
+    carMobile3,
+  ];
+  const items = window.innerWidth < 767 ? itemsMobile : item;
   const gh = [];
   for (let i = 0; i < arrs.length; i++) {
     const random = Math.floor(Math.random() * 7);

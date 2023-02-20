@@ -41,15 +41,14 @@ export const Roulette = () => {
          lx:w-screen 
          lx:rounded-none 
          lx:border-x-0
-        
           md:w-screen 
-          md:h-[70px] 
-          min-h-[70px] 
-          max-h-[150px]
+          md:h-[92px] 
+          min-h-[92px] 
+          max-h-[192px]
           relative
            border-white
             border-2 rounded-xl 
-            h-[200px] mt-[40px] 
+            h-[192px] mt-[40px] 
             overflow-hidden 
             ${style.transition}`}
       >
