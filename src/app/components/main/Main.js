@@ -18,8 +18,10 @@ export const Main = () => {
           <div className="">350</div>
           <div className=" opacity-50">/500 NFT</div>
         </div>
-        <div className="w-[500px] sm:w-[80%] h-[5px] bg-black relative mt-[15px]">
-          <div className="h-[5px] bg-blue-500 w-[75%] absolute z-10"></div>
+        <div className="w-[500px] sm:w-[80%] h-[7px] bg-black relative mt-[15px]">
+          <div
+            className={`h-full bg-blue-500 w-[75%] absolute z-10 ${style.bord}`}
+          ></div>
         </div>
 
         <Roulette />
