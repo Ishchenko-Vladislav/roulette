@@ -22,12 +22,13 @@ export const Roulette = () => {
   }, []);
   useLayoutEffect(() => {
     setArr(GenerateArray([...new Array(81)]));
-    window.addEventListener("resize", () => {
-      if (window.innerWidth !== width) {
+    window.addEventListener("resize", (e) => {
+      if (window.clientWidth !== width) {
         setArr(GenerateArray([...new Array(81)]));
         setWidth(window.innerWidth);
-        alert("change");
+        // alert("change");
       }
+      console.log(e.target.innerWidth);
     });
     // window.addEventListener("");
     console.log("change");
@@ -42,7 +43,7 @@ export const Roulette = () => {
       <div className="flex mt-[20px] items-center">
         <img src={info} alt="info" />
         <div className="ml-2 sm:text-xs ">
-          Mint price indicated in ETH (0.02 ETH)
+          Mint price indicated in ETH ({width} ETH)
         </div>
       </div>
       <div
