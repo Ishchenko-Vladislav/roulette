@@ -7,6 +7,7 @@ import { Button } from "../../ui/Button";
 import { GenerateArray } from "../../utils/GenerateArray";
 export const Roulette = () => {
   const [arr, setArr] = useState([]);
+  const [width, setWidth] = useState(0);
   const ref = useRef(null);
   const handler = () => {
     setArr(GenerateArray([...new Array(81)]));
@@ -16,12 +17,19 @@ export const Roulette = () => {
       ref.current.style = `transform: translate3d(-${scroll}px, 0, 0); transition: 5s cubic-bezier(.21,.53,.29,.99) `;
     }, 10);
   };
-
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
   useLayoutEffect(() => {
     setArr(GenerateArray([...new Array(81)]));
     window.addEventListener("resize", () => {
-      setArr(GenerateArray([...new Array(81)]));
+      if (window.innerWidth !== width) {
+        setArr(GenerateArray([...new Array(81)]));
+        setWidth(window.innerWidth);
+      }
     });
+    // window.addEventListener("");
+    console.log("change");
   }, []);
 
   return (
