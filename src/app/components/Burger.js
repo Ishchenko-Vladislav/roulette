@@ -43,22 +43,22 @@ export const Burger = () => {
         <div className="w-screen h-screen  bg-[rgba(0,0,0,0.9)] absolute top-0 left-0 z-30  overflow-auto">
           <div className="h-fit flex flex-col justify-center items-center py-5">
             <div className="my-[20px]">
-              <NavItem img={home} text="Home" />
+              <NavItem href={"#"} img={home} text="Home" />
             </div>
             <div className="my-[20px]">
-              <NavItem img={play} text="Trailer" />
+              <NavItem href={"#"} img={play} text="Trailer" />
             </div>
             <div className="my-[20px]">
-              <NavItem img={group} text="Group" />
+              <NavItem href={"#"} img={group} text="Group" />
             </div>
             <div className="my-[20px]">
-              <NavItem img={roadmap} text="Roadmap" />
+              <NavItem href={"#"} img={roadmap} text="Roadmap" />
             </div>
             <div className="my-[20px]">
-              <NavItem img={team} text="Team" />
+              <NavItem href={"#"} img={team} text="Team" />
             </div>
             <div className="my-[20px]">
-              <NavItem img={join} text="Join" />
+              <NavItem href={"#"} img={join} text="Join" />
             </div>
           </div>
         </div>

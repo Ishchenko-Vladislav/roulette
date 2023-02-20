@@ -16,12 +16,12 @@ export const Header = () => {
     <header className="max-h-[75px] 2xl:px-6 bg-[#1C1C1C] h-full flex px-12 items-center ">
       <img className="pr-12" src={logo} alt="logo" />
       <div className="flex lg:hidden">
-        <NavItem img={home} text="Home" />
-        <NavItem img={play} text="Trailer" />
-        <NavItem img={group} text="Group" />
-        <NavItem img={roadmap} text="Roadmap" />
-        <NavItem img={team} text="Team" />
-        <NavItem img={join} text="Join" />
+        <NavItem href={"#"} img={home} text="Home" />
+        <NavItem href={"#"} img={play} text="Trailer" />
+        <NavItem href={"#"} img={group} text="Group" />
+        <NavItem href={"#"} img={roadmap} text="Roadmap" />
+        <NavItem href={"#"} img={team} text="Team" />
+        <NavItem href={"#"} img={join} text="Join" />
       </div>
       <SwitchLanguage />
       <Button none text={"Get Start"} />

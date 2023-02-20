@@ -34,7 +34,24 @@ export const Roulette = () => {
         </div>
       </div>
       <div
-        className={`w-[1300px] mb-[50px] 2xl:w-[1000px] xl:w-[800px] lx:w-screen lx:rounded-none lx:border-x-0 md:w-screen md:h-[92px] min-h-[92px] max-h-[150px] relative border-white border-2 rounded-xl h-[200px] mt-[40px] overflow-hidden ${style.transition}`}
+        className={`w-[1300px]
+         mb-[50px] 
+         2xl:w-[1000px] 
+         xl:w-[800px] 
+         lx:w-screen 
+         lx:rounded-none 
+         lx:border-x-0
+        
+          md:w-screen 
+          md:h-[70px] 
+          min-h-[70px] 
+          max-h-[150px]
+          relative
+           border-white
+            border-2 rounded-xl 
+            h-[200px] mt-[40px] 
+            overflow-hidden 
+            ${style.transition}`}
       >
         <div className="absolute left-[50%] translate-x-[-50%] h-full z-10">
           <div className={style.top}></div>
