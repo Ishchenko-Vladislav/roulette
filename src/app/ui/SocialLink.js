@@ -2,8 +2,14 @@ import React from "react";
 
 export const SocialLink = ({ img, link }) => {
   return (
-    <a className="px-10 hover:opacity-75 xl:px-4" href={link}>
-      <img src={img} alt={img} />
+    <a className="hover:opacity-75" href={link} target="blank">
+      <img
+        className="object-cover"
+        width={32}
+        height={32}
+        src={img}
+        alt={img}
+      />
     </a>
   );
 };

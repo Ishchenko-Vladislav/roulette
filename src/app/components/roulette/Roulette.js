@@ -23,13 +23,15 @@ export const Roulette = () => {
 
   return (
     <>
-      <div className="flex mt-[25px] w-[50%] xl:w-[80%] sm:w-[90%] justify-evenly xl:justify-between">
+      <div className="flex mt-[25px] w-[50%] xl:w-[80%] sm:w-[90%] justify-evenly xl:justify-between space-x-4">
         <ButtonCount />
         <Button handler={handler} text={"Get Start"} />
       </div>
-      <div className="flex mt-[20px]">
+      <div className="flex mt-[20px] items-center">
         <img src={info} alt="info" />
-        <div className="ml-2">Mint price indicated in ETH (0.02 ETH)</div>
+        <div className="ml-2 sm:text-xs ">
+          Mint price indicated in ETH (0.02 ETH)
+        </div>
       </div>
       <div
         className={`w-[1300px] mb-[50px] 2xl:w-[1000px] xl:w-[800px] lx:w-screen lx:rounded-none lx:border-x-0 md:w-screen md:h-[92px] min-h-[92px] max-h-[150px] relative border-white border-2 rounded-xl h-[200px] mt-[40px] overflow-hidden ${style.transition}`}

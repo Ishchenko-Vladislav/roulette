@@ -7,19 +7,20 @@ export const ButtonCount = () => {
       <div
         className="cursor-pointer"
         onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        +
-      </div>
-      <div>{count}</div>
-      <div
-        className="cursor-pointer"
-        onClick={() => {
           count != 0 && setCount(count - 1);
         }}
       >
         -
+      </div>
+      <div>{count}</div>
+
+      <div
+        className="cursor-pointer"
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        +
       </div>
     </div>
   );

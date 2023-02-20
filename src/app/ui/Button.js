@@ -14,7 +14,7 @@ export const Button = ({ text, handler, none }) => {
         flex items-center
         justify-center
         text-[#0C0C0C]
-        text-lg font-normal
+        text-xl font-normal
         cursor-pointer
         hover:bg-opacity-75`}
     >
