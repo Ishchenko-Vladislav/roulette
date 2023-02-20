@@ -26,6 +26,7 @@ export const Roulette = () => {
       if (window.innerWidth !== width) {
         setArr(GenerateArray([...new Array(81)]));
         setWidth(window.innerWidth);
+        alert("change");
       }
     });
     // window.addEventListener("");
