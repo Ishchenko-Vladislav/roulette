@@ -22,7 +22,7 @@ export const Roulette = () => {
     setArr(GenerateArray([...new Array(81)]));
     const myObserver = new ResizeObserver((entries, observer) => {
       for (let entry of entries) {
-        if (entry.contentRect.height >= 188 || entry.contentRect.height <= 88) {
+        if (entry.contentRect.height >= 187 || entry.contentRect.height <= 89) {
           setArr(GenerateArray([...new Array(81)]));
         }
       }

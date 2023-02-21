@@ -5,7 +5,7 @@ import verified from "../images/Verified.png";
 import discordIcon from "../images/discordIcon.png";
 import telegramIcon from "../images/telegramIcon.png";
 import twitterIcon from "../images/twitterIcon.png";
-import youtubeIcon from "../images/youtube.png";
+import youtubeIcon from "../images/youtube2.png";
 import instIcon from "../images/instIcon.png";
 import { FooterItem } from "../ui/FooterItem";
 import { SocialLink } from "../ui/SocialLink";
