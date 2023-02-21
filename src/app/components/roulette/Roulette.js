@@ -7,7 +7,7 @@ import { Button } from "../../ui/Button";
 import { GenerateArray } from "../../utils/GenerateArray";
 export const Roulette = () => {
   const [arr, setArr] = useState([]);
-  const [width, setWidth] = useState(0);
+  const [hei, setHei] = useState(0);
   const ref = useRef(null);
   const handler = () => {
     setArr(GenerateArray([...new Array(81)]));
@@ -17,21 +17,18 @@ export const Roulette = () => {
       ref.current.style = `transform: translate3d(-${scroll}px, 0, 0); transition: 5s cubic-bezier(.21,.53,.29,.99) `;
     }, 10);
   };
+
   useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
-  useLayoutEffect(() => {
     setArr(GenerateArray([...new Array(81)]));
-    window.addEventListener("resize", (e) => {
-      if (window.clientWidth !== width) {
-        setArr(GenerateArray([...new Array(81)]));
-        setWidth(window.innerWidth);
-        // alert("change");
+    const myObserver = new ResizeObserver((entries, observer) => {
+      for (let entry of entries) {
+        if (entry.contentRect.height >= 188 || entry.contentRect.height <= 88) {
+          setArr(GenerateArray([...new Array(81)]));
+        }
       }
-      console.log(e.target.innerWidth);
     });
-    // window.addEventListener("");
-    console.log("change");
+    const myEl = document.querySelector("#observ");
+    myObserver.observe(myEl);
   }, []);
 
   return (
@@ -43,10 +40,11 @@ export const Roulette = () => {
       <div className="flex mt-[20px] items-center">
         <img src={info} alt="info" />
         <div className="ml-2 sm:text-xs ">
-          Mint price indicated in ETH ({width} ETH)
+          Mint price indicated in ETH (0.02 ETH)
         </div>
       </div>
       <div
+        id="observ"
         className={`
         w-[1300px]
          mb-[50px] 
